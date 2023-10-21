@@ -35,6 +35,15 @@ AFRAME.registerComponent("target-coin", {
         loop:"true",
         dur:1000
       });
+
+      coinEl.setAttribute("static-body",{
+        shape:"sphere",
+        sphereRadius:2,
+      });
+  
+      coinEl.setAttribute("game-play",{
+        elementId:`#${id}`,
+      });
   
       islandEl.appendChild(coinEl);
     }

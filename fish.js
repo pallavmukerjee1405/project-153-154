@@ -24,6 +24,16 @@ AFRAME.registerComponent("obstacle-fish",{
 
         fishEl.setAttribute("gltf-model","./assets/gold_fish/scene.gltf");
         fishEl.setAttribute("animation-mixer",{});
+
+        fishEl.setAttribute("static-body",{
+            shape:"sphere",
+            sphereRadius:5,
+          });
+      
+          fishEl.setAttribute("game-play",{
+            elementId:`#${id}`,
+          });
+
         islandEl.appendChild(fishEl);
     }
 
